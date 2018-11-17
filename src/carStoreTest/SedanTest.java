@@ -8,34 +8,33 @@ import org.junit.Test;
 
 import carStore.Category;
 import carStore.Sedan;
+import carStore.Sedan;
 
 public class SedanTest {
 
 	Sedan sedan;
-	Category categoria;
+    Category category;
 	
 
 	@Before
 	public void setUp() throws Exception {
-		categoria = new Category("Premium");
-		sedan = new Sedan(320, categoria);
+		this.category = new Category("Basico");
+		sedan = new Sedan(2010,12000,1120,105,31000,10.1, 13.2, "ITD-2033", 55, "Focus", category, 550);
 	}
 
 	@Test
 	public void testGetLuggageSize() {
-		assertEquals(320,sedan.getLuggageSize());
+		assertEquals(550,sedan.getLuggageSize());
 	}
-
+	
 	@Test
 	public void testSetLuggageSize() {
-		sedan.setLuggageSize(400);
-		assertEquals(400, sedan.getLuggageSize());
+		sedan.setLuggageSize(250);
+		assertEquals(250, sedan.getLuggageSize());
 	}
 
-	@Test
-	public void testGetCategoria() {
-		assertEquals("Premium", sedan.getCategoria());
-	}
+	
+
 
 	
 	

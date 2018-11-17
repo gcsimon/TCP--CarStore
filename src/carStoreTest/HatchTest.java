@@ -12,29 +12,29 @@ import carStore.Sedan;
 public class HatchTest {
 
 	Hatch hatch;
-	Category categoria;
+	Category category;
 	
 
 	@Before
 	public void setUp() throws Exception {
-		categoria = new Category("Sport");
-		hatch = new Hatch(200, categoria);
+		this.category = new Category("Basico");
+		hatch = new Hatch(2014,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "HB20", category, 150);
 	}
 
 	@Test
 	public void testGetLuggageSize() {
-		assertEquals(200,hatch.getLuggageSize());
+		assertEquals(150,hatch.getLuggageSize());
 	}
-
+	
 	@Test
 	public void testSetLuggageSize() {
-		hatch.setLuggageSize(150);
-		assertEquals(150, hatch.getLuggageSize());
+		hatch.setLuggageSize(250);
+		assertEquals(250, hatch.getLuggageSize());
 	}
 
-	@Test
-	public void testGetCategoria() {
-		assertEquals("Sport", hatch.getCategoria());
-	}
+
+
+	
+
 
 }

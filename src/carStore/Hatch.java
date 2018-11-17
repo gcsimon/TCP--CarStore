@@ -3,10 +3,8 @@ package carStore;
 public class Hatch extends Automobile {
 
 	private int luggageSize;
-	private Category categoria;
-	
-	
-	
+
+
 	public int getLuggageSize() {
 		return luggageSize;
 	}
@@ -15,18 +13,26 @@ public class Hatch extends Automobile {
 		this.luggageSize = luggageSize;
 	}
 
-	public String getCategoria() {
-		return categoria.getTypevehicle();
-	}
-
 	
-	private Hatch(){
+	public Hatch(){
 		
 	}
 	
-	public Hatch(int luggageSize, Category categoria){
-	    this.luggageSize = luggageSize;
-		this.categoria = categoria;
-	}
+public Hatch(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int luggageSize) {
+		
+		this.setYear(year);
+		this.setKm(km);
+		this.setWeight(weight);
+		this.setHp(hp);
+		this.setValue(value);
+		this.setUrbanConsuption(urbanConsumption);
+		this.setRoadConsumption(roadConsumption);
+		this.setLicensePlate(licensePlate);
+		this.setTankSize(Tanksize);		
+		this.setModel(model);
+		this.setCategory(category);
+		this.setLuggageSize(luggageSize);
+}
+
 }
 

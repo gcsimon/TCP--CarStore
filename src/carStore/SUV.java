@@ -4,20 +4,7 @@ public class SUV extends Automobile {
 	
 	private int groundheight;
 	private boolean fourByFour;
-	private Category categoria;
 	
-	
-	private SUV(){
-		
-		
-	}
-	
-	public SUV(int groundheight, boolean fourByFour, Category categoria ) {
-
-		this.groundheight = groundheight;
-		this.fourByFour = fourByFour;
-		this.categoria = categoria;
-	}
 
 
 	public int getGroundheight() {
@@ -39,13 +26,29 @@ public class SUV extends Automobile {
 		this.fourByFour = fourByFour;
 	}
 
-
-	public String getCategoria() {
-		return categoria.getTypevehicle();
+	
+	public SUV(){
+		
+		
 	}
-
-
 	
-	
+     public SUV(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int groundheight, boolean fourByFour) {
+		
+		this.setYear(year);
+		this.setKm(km);
+		this.setWeight(weight);
+		this.setHp(hp);
+		this.setValue(value);
+		this.setUrbanConsuption(urbanConsumption);
+		this.setRoadConsumption(roadConsumption);
+		this.setLicensePlate(licensePlate);
+		this.setTankSize(Tanksize);		
+		this.setModel(model);
+		this.setCategory(category);
+        this.setGroundheight(groundheight);
+        this.setFourByFour(fourByFour);
+
+     }
+
 
 }

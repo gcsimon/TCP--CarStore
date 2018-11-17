@@ -10,28 +10,28 @@ import carStore.Pickup;
 
 public class PickupTest {
 
-	Category categoria;
 	Pickup pickup;
+	 Category category;
+	 
 	@Before
 	public void setUp() throws Exception {
-		categoria = new Category("OffRoad");
-		pickup = new Pickup(2000, categoria);
+	
+		pickup = new Pickup(2014,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "Ranger", category, 2500);
+		
 	}
 
 	@Test
-	public void testGetCarryingCapacity() {
-		assertEquals(2000, pickup.getCarryingCapacity());
+	public void testGetCarryingCapacity() {	
+		assertEquals(2500, pickup.getCarryingCapacity());
 	}
-
+	
 	@Test
 	public void testSetCarryingCapacity() {
 		pickup.setCarryingCapacity(1500);
 		assertEquals(1500, pickup.getCarryingCapacity());
 	}
-
-	@Test
-	public void testGetCategoria() {
-		assertEquals("OffRoad", pickup.getCategoria());
-	}
+	
 
 }
+
+

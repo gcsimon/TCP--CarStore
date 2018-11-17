@@ -3,10 +3,8 @@ package carStore;
 public class Pickup extends Automobile {
 	
 	private int carryingCapacity;
-	private Category categoria;
-	
-	
 
+	
 	public int getCarryingCapacity() {
 		return carryingCapacity;
 	}
@@ -17,18 +15,23 @@ public class Pickup extends Automobile {
 	}
 
 
-	public String getCategoria() {
-		return categoria.getTypevehicle();
-	}
-
-	
-	private Pickup(){
+	public Pickup(){
 		
 	}
 	
-	public Pickup(int carryingCapacity, Category categoria){
-	    this.carryingCapacity = carryingCapacity;
-		this.categoria = categoria;
-
-    }
+     public Pickup(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int carryingCapacity) {
+		
+		this.setYear(year);
+		this.setKm(km);
+		this.setWeight(weight);
+		this.setHp(hp);
+		this.setValue(value);
+		this.setUrbanConsuption(urbanConsumption);
+		this.setRoadConsumption(roadConsumption);
+		this.setLicensePlate(licensePlate);
+		this.setTankSize(Tanksize);		
+		this.setModel(model);
+		this.setCategory(category);
+		this.setCarryingCapacity(carryingCapacity);
+     }
 }

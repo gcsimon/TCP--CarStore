@@ -6,13 +6,16 @@ import org.junit.Before;
 import org.junit.Test;
 
 import carStore.Automobile;
+import carStore.Category;
 
 public class AutomobileTest {
 	Automobile car = new Automobile();
+	Category category;
 	
 	@Before
 	public void setUp() {
-		car = new Automobile(2012,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "Uno");
+		category = new Category("Basic");
+		car = new Automobile(2012,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "Uno", category);
 	}
 	
 	
@@ -62,6 +65,19 @@ public class AutomobileTest {
 	public void getYearTest() {
 		assertEquals(this.car.getYear(), 2012);
 	}
+	
+	@Test
+	public void getCategoryTest() {
+		assertEquals(this.car.getCategory(), category);
+	}
+	
+	@Test
+	public void setCategoryTest() {
+		Category category2 = new Category("Sport");
+		this.car.setCategory(category2);
+		assertEquals(this.car.getCategory(), category2 );
+	}
+	
 	
 	
 	
