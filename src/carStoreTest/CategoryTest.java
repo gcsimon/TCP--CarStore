@@ -7,23 +7,17 @@ import carStore.Category;
 
 public class CategoryTest {
 
-	Category cat;
+	Category categoria;
 	
 	@Before
 	public void setUp() {
-		cat = new Category("Basic");
+		categoria = new Category("Basic");
 	}
 
 	@Test
 	public void getTypevehicleTest() {
-		assertEquals("Basic", cat.getTypevehicle());
+		assertEquals("Basic", categoria.getTypevehicle());
 		
-	}
-
-	@Test
-	public void setTypevehicleTest() {
-		cat.setTypevehicle("Premium");
-		assertEquals( cat.getTypevehicle(),"Premium");
 		
 	}
 }

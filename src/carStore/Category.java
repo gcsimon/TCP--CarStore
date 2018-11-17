@@ -9,10 +9,7 @@ public class Category {
 		return typevehicle;
 	}
 
-	public void setTypevehicle(String typevehicle) {
-		this.typevehicle = typevehicle;
-	}
-    
+
     private Category()
     {
     	
