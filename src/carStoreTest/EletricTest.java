@@ -17,20 +17,20 @@ public class EletricTest {
 	@Before
 	public void setUp() throws Exception {
 		categoria = new Category("Basico");
-		eletric = new Eletric(12, categoria);
+		eletric = new Eletric(10.0, categoria);
 	}
 
 
 	@Test
 	public void testGetChargingTime() {
-		assertEquals(12.0, eletric.getChargingTime());
+		assertEquals(10.0, eletric.getChargingTime(), 0.1);
 		
 	}
 
 	@Test
 	public void testSetChargingTime() {
 		eletric.setChargingTime(9.0);
-		assertEquals(9.0, eletric.getChargingTime());
+		assertEquals(9.0, eletric.getChargingTime(), 0.1);
 	}
 
 	@Test
