@@ -8,7 +8,6 @@ import org.junit.Test;
 
 import carStore.Category;
 import carStore.Sedan;
-import carStore.Sedan;
 
 public class SedanTest {
 
