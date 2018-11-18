@@ -6,15 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 import carStore.Automobile;
-import carStore.Category;
 
 public class AutomobileTest {
 	Automobile car = new Automobile();
-	Category category;
+	String category;
 	
 	@Before
 	public void setUp() {
-		category = new Category("Basic");
+		category = "Basic";
 		car = new Automobile(2012,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "Uno", category);
 	}
 	
@@ -73,7 +72,7 @@ public class AutomobileTest {
 	
 	@Test
 	public void setCategoryTest() {
-		Category category2 = new Category("Sport");
+		String  category2 = "Sport";
 		this.car.setCategory(category2);
 		assertEquals(this.car.getCategory(), category2 );
 	}

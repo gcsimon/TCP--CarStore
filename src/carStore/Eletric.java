@@ -16,7 +16,7 @@ public class Eletric extends Automobile {
 		
 	}
 	
-    public Eletric(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, double chargingTime) {
+    public Eletric(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, String category, double chargingTime) {
 		
 		this.setYear(year);
 		this.setKm(km);
