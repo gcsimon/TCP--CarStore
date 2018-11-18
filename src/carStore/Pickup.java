@@ -19,7 +19,7 @@ public class Pickup extends Automobile {
 		
 	}
 	
-     public Pickup(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int carryingCapacity) {
+     public Pickup(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, String category, int carryingCapacity) {
 		
 		this.setYear(year);
 		this.setKm(km);

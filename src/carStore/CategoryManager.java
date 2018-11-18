@@ -5,22 +5,22 @@ import java.util.List;
 
 public class CategoryManager {
 	
-	List<Category> Categories;
+	List<String> Categories;
 	
 	
 	public CategoryManager() {
 		Categories = new ArrayList<>();
 	}
 	
-	public void addCategory(Category cat) {
+	public void addCategory(String cat) {
 		Categories.add(cat);
 	}
 	
-	public void removeCategory(Category cat) {
+	public void removeCategory(String cat) {
 		Categories.remove(cat);
 	}
 	
-	public boolean checkIfCategoryExists(Category cat) {
+	public boolean checkIfCategoryExists(String cat) {
 		return Categories.contains(cat);
 	}
 

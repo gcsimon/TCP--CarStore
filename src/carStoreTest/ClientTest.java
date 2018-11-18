@@ -6,14 +6,13 @@ import org.junit.Before;
 import org.junit.Test;
 
 import carStore.Automobile;
-import carStore.Category;
 import carStore.Client;
 import carStore.Pickup;
 
 public class ClientTest {
 
 	Client client;
-	Category category;
+	String category;
 	Automobile automobile;
 	
 	@Before
@@ -40,10 +39,10 @@ public class ClientTest {
 
 	@Test
 	public void testSetCpf() {
-		this.client.setCpf("87565347490843"); //Mais de 11 digitos
+		this.client.setCpf("8756534f4537490843"); //Mais de 11 digitos
 		assertEquals("86598743534", this.client.getCpf());
 		
-		this.client.setCpf("875653"); //Menos de 11 digitos
+		this.client.setCpf("5453"); //Menos de 11 digitos
 		assertEquals("86598743534", this.client.getCpf());
 		
 		this.client.setCpf("86798054676"); //11 digitos

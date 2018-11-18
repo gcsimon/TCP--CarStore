@@ -32,7 +32,7 @@ public class SUV extends Automobile {
 		
 	}
 	
-     public SUV(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int groundheight, boolean fourByFour) {
+     public SUV(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, String category, int groundheight, boolean fourByFour) {
 		
 		this.setYear(year);
 		this.setKm(km);

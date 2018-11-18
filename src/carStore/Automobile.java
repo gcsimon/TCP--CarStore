@@ -11,7 +11,7 @@ public class Automobile {
 	private String licensePlate;
 	private int tankSize;
 	private String model;
-	private Category category;
+	private String category;
 	
 	public int getYear() {
 		return year;
@@ -85,13 +85,13 @@ public class Automobile {
 	public void setModel(String model) {
 		this.model = model;
 	}	
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}	
-	public Automobile(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category ) {
+	public Automobile(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, String category ) {
 		
 		this.setYear(year);
 		this.setKm(km);
@@ -108,4 +108,5 @@ public class Automobile {
 	public Automobile() {
 		
 	}
+
 }

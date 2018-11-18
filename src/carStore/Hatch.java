@@ -18,7 +18,7 @@ public class Hatch extends Automobile {
 		
 	}
 	
-public Hatch(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, Category category, int luggageSize) {
+public Hatch(int year, long km, int weight, int hp,double value, double urbanConsumption, double roadConsumption, String licensePlate, int Tanksize, String model, String category, int luggageSize) {
 		
 		this.setYear(year);
 		this.setKm(km);

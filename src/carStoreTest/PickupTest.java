@@ -5,13 +5,12 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import carStore.Category;
 import carStore.Pickup;
 
 public class PickupTest {
 
-	Pickup pickup;
-	 Category category;
+	 Pickup pickup;
+	 String category;
 	 
 	@Before
 	public void setUp() throws Exception {

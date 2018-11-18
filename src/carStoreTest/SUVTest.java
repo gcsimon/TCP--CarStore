@@ -3,8 +3,6 @@ package carStoreTest;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-
-import carStore.Category;
 import carStore.SUV;
 
 
@@ -12,12 +10,12 @@ public class SUVTest {
 
 
 	SUV suv;
-	Category category;
+	String category;
 	
 	@Before
 	public void setUp() {
 
-		this.category = new Category("Basico");
+		this.category = "Basico";
 		suv = new SUV(2013,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "IX35", category, 40, true);
 	}
 	

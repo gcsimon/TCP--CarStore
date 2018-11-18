@@ -4,18 +4,17 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-import carStore.Category;
 import carStore.Hatch;
 
 public class HatchTest {
 
 	Hatch hatch;
-	Category category;
+	String category;
 	
 
 	@Before
 	public void setUp() throws Exception {
-		this.category = new Category("Basico");
+		this.category = "Basico";
 		hatch = new Hatch(2014,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "HB20", category, 150);
 	}
 

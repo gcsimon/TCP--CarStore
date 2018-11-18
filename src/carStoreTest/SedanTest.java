@@ -5,19 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import carStore.Category;
 import carStore.Sedan;
 
 public class SedanTest {
 
 	Sedan sedan;
-    Category category;
+    String category;
 	
 
 	@Before
 	public void setUp() throws Exception {
-		this.category = new Category("Basico");
+		this.category = "Basico";
 		sedan = new Sedan(2010,12000,1120,105,31000,10.1, 13.2, "ITD-2033", 55, "Focus", category, 550);
 	}
 
