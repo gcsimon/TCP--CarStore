@@ -4,10 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
 import carStore.Category;
 import carStore.Hatch;
-import carStore.Sedan;
 
 public class HatchTest {
 

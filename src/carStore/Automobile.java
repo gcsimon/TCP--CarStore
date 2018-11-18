@@ -96,7 +96,7 @@ public class Automobile {
 		this.setYear(year);
 		this.setKm(km);
 		this.setWeight(weight);
-		this.setHp(hp);
+		this.setHp(hp); 
 		this.setValue(value);
 		this.setUrbanConsuption(urbanConsumption);
 		this.setRoadConsumption(roadConsumption);
@@ -108,5 +108,4 @@ public class Automobile {
 	public Automobile() {
 		
 	}
-
 }
