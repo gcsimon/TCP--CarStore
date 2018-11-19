@@ -17,8 +17,8 @@ public class ClientTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		client = new Client("Maria", "86598743534", "5233287054");
-		automobile =  new Pickup(2014,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "Ranger", category, 2500);
+		client = new Client("Maria", "86598743534", "5233287054", "SUV");
+		automobile =  new Pickup(2014,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "Ranger", "SUV", 2500);
 	}
 
 	@Test
@@ -64,18 +64,15 @@ public class ClientTest {
 	
 	@Test
 	public void testGetScore() {
-		double score = this.client.getScore();
-		assertTrue(score>0);
-		assertTrue(score<10);
+		
+		Automobile auto = new Pickup(2014,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "Ranger", "SUV", 2500);
+		double score = this.client.getScore(auto);
+		
+		assertEquals(score,7.5,0.1);
+		
 	
 	}
-     
-	
-	@Test
-	public void testAvaliaCarro() {
-		fail("Not yet implemented");
 
-	}
 
 
 }

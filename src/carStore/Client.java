@@ -7,13 +7,15 @@ public class Client {
 	private String name;
 	private String cpf;
 	private String telephone;
+	private String preferencialCategory;
 	
 	Client(){}
 	
-	public Client(String name, String cpf, String telephone){
+	public Client(String name, String cpf, String telephone, String preferencialCategory){
 		this.name = name;
 		this.cpf = cpf;
 		this.telephone = telephone;
+		this.setPreferencialCategory(preferencialCategory);
 	}
 	
 	public String getName() {
@@ -41,34 +43,47 @@ public class Client {
 		this.telephone = telephone;
 	}
 	
-	public double getScore() {
-		double score;
-		Scanner ler = new Scanner(System.in);
+	public double getScore(Automobile auto) {
+		double score=0;
 		
-		System.out.println("Dê uma nota para este veículo: ");
-		do {
-		      score = ler.nextDouble();
-		      
-		      if(score<0 || score>10) {
-		    	  System.out.println("Nota invalida ");
-		    	  System.out.println("Dê uma nota entre 0.00 e 10.00 ");
-		      }
-		      
-		   }while(score<0 || score>10);
+		System.out.println(auto.getClass().getSimpleName().toString());
+		System.out.println(this.getPreferencialCategory().toString());
+		if(auto.getCategory().equals(this.getPreferencialCategory().toString())) {
+			if(auto.getValue() < 20000)
+				score=10;
+			else if(auto.getValue() < 25000)
+				score = 9;
+			else if(auto.getValue() < 35000)
+				score = 7.5;
+			else if(auto.getValue() < 50000)
+				score = 6;			
+		}
+		else if 
+			(auto.getValue() < 20000)
+				score=5;
+			else if(auto.getValue() < 25000)
+				score = 3;
+			else if(auto.getValue() < 35000)
+				score = 2;
+			else 
+				score = 1;				
 		
-		ler.close();
 		return score;
 	}
 	
-	public void avaliaCarro(Automobile automobile, double score){
-		
-		System.out.println("Modelo: " + automobile.getModel());
-		System.out.println("Ano:    " + automobile.getYear());
-		score = this.getScore();
-		System.out.println("\n\n------------------------------------");
-		System.out.println(automobile.getModel());
-		System.out.println(automobile.getYear());
-		System.out.print("Sua avaliacao:  "+ score);
-		 	
+	public void info() {
+		System.out.println("Nome: " + this.getName());
+		System.out.println("Telefone: " + this.getTelephone());
+		System.out.println("Categoria preferencial: " + this.getPreferencialCategory());
+		System.out.println("--------------------------");
+	}
+
+
+	public String getPreferencialCategory() {
+		return preferencialCategory;
+	}
+
+	public void setPreferencialCategory(String preferencialCategory) {
+		this.preferencialCategory = preferencialCategory;
 	}
 }

@@ -9,14 +9,17 @@ import java.util.Scanner;
 public class Store {
 	
 	List<Automobile> cars;
+	List<Client> clients;
 	CategoryManager categories;
 	
 	public Store(){
 		cars = new ArrayList<>();
 		categories = new CategoryManager();
+		clients = new ArrayList<Client>();
 		categories.addCategory("Lux");
 		categories.addCategory("Premium");
-		categories.addCategory("Popular");		
+		categories.addCategory("Popular");	
+		
 	}
 	
 	
@@ -153,14 +156,60 @@ public class Store {
         }
 	}
 	
+	public void printCarRepository() {
+		for(Automobile auto : this.cars)
+			auto.info();
+	}
+	
+	public void printClientRepository() {
+		for(Client c : this.clients)
+			c.info();
+	}
+	
+	public void addClient() {
+		Scanner scan = new Scanner(System.in);			
+		System.out.println("Nome: ");
+		String name= scan.next();
+		System.out.println("CPF: ");
+		String cpf= scan.next();
+		System.out.println("Telefone: ");
+		String telephone= scan.next();
+		System.out.println("Categoria preferencial: ");
+		String preferencialCategory= scan.next();		
+		this.clients.add(new Client(name,cpf,telephone,preferencialCategory));
+	}
+	
+	public void menu() {
+		Scanner scan = new Scanner(System.in);		
+		int option = 0;
+		
+		
+		System.out.print("Digite a opcao que deseja fazer ou 0 para sair ");
+		System.out.println("1 para adicionar veiculo");
+		System.out.println("2 para listar veiculos disponiveis");
+		System.out.println("3 para checar valor de um veiculo");
+		System.out.println("3 para adicionar um cliente");
+		
+        String  licensePlate  = scan.next();
+	}
+	
 	
     public static void main(String[] args) {    	
     	Store st = new Store();
     	//st.addAutomobile(); 
     	//st.removeAutomobile();
-    	st.cars.add(new Sedan(2012,32000,1050,105,28000, 10.2,12.5,"IUH1515",52,"spin2","Premium",470)); 
+    	st.cars.add(new SUV(2018,90000,1300,140,120000, 9,15.5,"ABC1511",52,"Tracker","Premium",12,false)); 
+    	st.cars.add(new Sedan(2012,32000,1050,105,28000, 10.2,12.5,"IUH1515",52,"Logan","Popular",470)); 
     	st.cars.add(new Hatch(2012,30000,1050,105,22000, 10.2,12.5,"IUH1691",52,"spin","Premium",470)); 
-    	st.checkValue();
+    	st.cars.add(new Sedan(2012,26600,1120,105,150000, 6,9,"IUH1691",60,"BMW 320i","Premium",330)); 
+    	
+    	st.clients.add(new Client("Maria", "86598743534", "5233287054", "Popular")) ;
+    	st.clients.add(new Client("Joao",  "53535353534", "5233520544", "Premium"));
+    	st.clients.add(new Client("Jose",  "11559988553", "5133254054", "Premium"));
+    	
+    	st.addClient();
+    	st.printClientRepository();
+    	st.menu();
   	
     }
     

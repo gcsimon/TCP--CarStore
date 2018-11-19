@@ -108,5 +108,19 @@ public class Automobile {
 	public Automobile() {
 		
 	}
+	
+	public void info() {
+		
+		System.out.println("Modelo: " + this.getModel());
+		System.out.println("Tipo de veiculo: " + this.getClass().getSimpleName());
+		System.out.println("Categoria: " + this.getCategory());
+		System.out.println("Preco: " + this.getValue());
+		System.out.println("km: " + this.getKm());
+		System.out.println("placa: " + this.getLicensePlate());
+		System.out.println("--------------------------------");
+		
+		
+		
+	}
 
 }
