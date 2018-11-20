@@ -1,0 +1,20 @@
+<list>
+  <client>
+    <name>Maria</name>
+    <cpf>86598743534</cpf>
+    <telephone>5233287054</telephone>
+    <preferencialCategory>Popular</preferencialCategory>
+  </client>
+  <client>
+    <name>Joao</name>
+    <cpf>53535353534</cpf>
+    <telephone>5233520544</telephone>
+    <preferencialCategory>Premium</preferencialCategory>
+  </client>
+  <client>
+    <name>Jose</name>
+    <cpf>11559988553</cpf>
+    <telephone>5133254054</telephone>
+    <preferencialCategory>Premium</preferencialCategory>
+  </client>
+</list>

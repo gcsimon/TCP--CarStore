@@ -2,6 +2,9 @@ package carStore;
 
 import java.util.Scanner;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("client")
 public class Client {
 
 	private String name;

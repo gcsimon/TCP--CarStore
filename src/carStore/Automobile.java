@@ -1,5 +1,8 @@
 package carStore;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("automobile")
 public class Automobile {
 	private int year;
 	private long km;
