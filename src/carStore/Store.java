@@ -22,6 +22,21 @@ public class Store {
 		
 	}
 	
+	public void addKm() {
+		Scanner scan = new Scanner(System.in);		
+		System.out.print("placa do automovel a ser aumentada a km:  ");
+        String  licensePlate  = scan.next();
+        for(Automobile a : this.cars) {
+        	if (a.getLicensePlate().toString().equals(licensePlate)) {
+        		System.out.print("km a serem adicionados:  ");
+                long  km  = scan.nextLong();
+        		a.setKm(a.getKm() + km);
+        		System.out.println("Veículo atualizado");
+        	}
+        }   
+        scan.close();
+	}
+	
 	
 	public void addAutomobile() {		
 		Scanner scan = new Scanner(System.in);
@@ -112,19 +127,33 @@ public class Store {
         }
         else
         	System.out.println("opcao invalida");
+        scan.close();
 	}
 	
 	public void removeAutomobile() {
 		Scanner scan = new Scanner(System.in);
-		System.out.print("placa do automovel a ser removido:  ");
+		System.out.print("placa do automovel a ser vendido:  ");
         String  licensePlate  = scan.next();
         List<Automobile> toRemove = new ArrayList<>();
         for(Automobile a : this.cars) {
         	if (a.getLicensePlate().equals(licensePlate))
         		toRemove.add(a);
-        		System.out.println("HREEE");
         }        
         this.cars.removeAll(toRemove);
+        scan.close();
+	}
+	
+	public void removeClient() {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("nome do cliente a ser removido:  ");
+        String  name  = scan.next();
+        List<Client> toRemove = new ArrayList<>();
+        for(Client a : this.clients) {
+        	if (a.getName().equals(name))
+        		toRemove.add(a);
+        }        
+        this.clients.removeAll(toRemove);
+        scan.close();
 	}
 	
 	public void searchAutomobile() {
@@ -141,7 +170,8 @@ public class Store {
         for(Automobile auto : this.cars) {
         	if (auto.getValue() <= maxValue && auto.getYear() >= maxYear && auto.getRoadConsumption() >= kmPerLt)
         		System.out.println(auto.getLicensePlate());
-        }        
+        }   
+        scan.close();
 
 	}
 	
@@ -154,6 +184,7 @@ public class Store {
         	if (auto.getLicensePlate().equals(licensePlate))
         		System.out.println(auto.getValue());
         }
+        scan.close();
 	}
 	
 	public void printCarRepository() {
@@ -177,20 +208,51 @@ public class Store {
 		System.out.println("Categoria preferencial: ");
 		String preferencialCategory= scan.next();		
 		this.clients.add(new Client(name,cpf,telephone,preferencialCategory));
+		scan.close();
 	}
 	
 	public void menu() {
 		Scanner scan = new Scanner(System.in);		
-		int option = 0;
+		int option = 1;			
 		
-		
-		System.out.print("Digite a opcao que deseja fazer ou 0 para sair ");
-		System.out.println("1 para adicionar veiculo");
-		System.out.println("2 para listar veiculos disponiveis");
-		System.out.println("3 para checar valor de um veiculo");
-		System.out.println("3 para adicionar um cliente");
-		
-        String  licensePlate  = scan.next();
+		while(option != 0) {
+			System.out.println("Digite a opcao que deseja fazer ou 0 para sair ");
+					
+			System.out.println("1 para adicionar veiculo");
+			System.out.println("2 para listar veiculos disponiveis");
+			System.out.println("3 para checar valor de um veiculo");
+			System.out.println("4 para adicionar um cliente");
+			System.out.println("5 para remover um cliente");
+			System.out.println("6 para adicionar uma categoria");
+			System.out.println("7 para listar os clientes");
+			System.out.println("8 para procurar um carro a partir de valor maximo, ano minimo e km/l min");
+			System.out.println("9 para vender veiculo");
+			System.out.println("10 para indicar veiculo para cliente");
+			option=scan.nextInt();	
+			if(option == 1)
+				this.addAutomobile();
+			else if (option == 2) 
+				this.printCarRepository();
+			else if (option == 3)
+				this.checkValue();
+			else if (option == 4)
+				this.addClient();
+			else if (option == 5)
+				this.removeClient();
+			else if (option == 6)
+				this.categories.addCategory();
+			else if (option == 7)
+				this.printClientRepository();
+			else if (option == 8)
+				this.searchAutomobile();
+			else if (option == 9)
+				this.removeAutomobile();
+			else if (option == 10)
+				System.out.println("not yet");
+			System.out.println("");
+			System.out.println("");
+		}
+	
 	}
 	
 	
@@ -201,14 +263,12 @@ public class Store {
     	st.cars.add(new SUV(2018,90000,1300,140,120000, 9,15.5,"ABC1511",52,"Tracker","Premium",12,false)); 
     	st.cars.add(new Sedan(2012,32000,1050,105,28000, 10.2,12.5,"IUH1515",52,"Logan","Popular",470)); 
     	st.cars.add(new Hatch(2012,30000,1050,105,22000, 10.2,12.5,"IUH1691",52,"spin","Premium",470)); 
-    	st.cars.add(new Sedan(2012,26600,1120,105,150000, 6,9,"IUH1691",60,"BMW 320i","Premium",330)); 
+    	st.cars.add(new Sedan(2012,26600,1120,105,150000, 6,9,"IUH1699",60,"BMW 320i","Premium",330)); 
     	
     	st.clients.add(new Client("Maria", "86598743534", "5233287054", "Popular")) ;
     	st.clients.add(new Client("Joao",  "53535353534", "5233520544", "Premium"));
     	st.clients.add(new Client("Jose",  "11559988553", "5133254054", "Premium"));
     	
-    	st.addClient();
-    	st.printClientRepository();
     	st.menu();
   	
     }
