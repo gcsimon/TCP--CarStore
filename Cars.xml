@@ -1,59 +1,73 @@
 <list>
-  <carStore.SUV>
+  <carStore.Eletric>
     <year>2018</year>
-    <km>90000</km>
-    <weight>1300</weight>
-    <hp>140</hp>
-    <value>120000.0</value>
-    <urbanConsuption>9.0</urbanConsuption>
-    <roadConsumption>15.5</roadConsumption>
-    <licensePlate>ABC1511</licensePlate>
-    <tankSize>52</tankSize>
-    <model>Tracker</model>
+    <km>12000</km>
+    <weight>1120</weight>
+    <hp>128</hp>
+    <value>31000.0</value>
+    <urbanConsuption>30.1</urbanConsuption>
+    <roadConsumption>22.2</roadConsumption>
+    <licensePlate>ITD-2033</licensePlate>
+    <tankSize>38</tankSize>
+    <model>Prius</model>
     <category>Premium</category>
-    <groundheight>12</groundheight>
-    <fourByFour>false</fourByFour>
-  </carStore.SUV>
-  <carStore.Sedan>
-    <year>2012</year>
-    <km>32000</km>
-    <weight>1050</weight>
-    <hp>105</hp>
-    <value>28000.0</value>
-    <urbanConsuption>10.2</urbanConsuption>
-    <roadConsumption>12.5</roadConsumption>
-    <licensePlate>IUH1515</licensePlate>
-    <tankSize>52</tankSize>
-    <model>Logan</model>
-    <category>Popular</category>
-    <luggageSize>470</luggageSize>
-  </carStore.Sedan>
+    <chargingTime>12.0</chargingTime>
+  </carStore.Eletric>
   <carStore.Hatch>
-    <year>2012</year>
-    <km>30000</km>
-    <weight>1050</weight>
-    <hp>105</hp>
-    <value>22000.0</value>
-    <urbanConsuption>10.2</urbanConsuption>
-    <roadConsumption>12.5</roadConsumption>
-    <licensePlate>IUH1691</licensePlate>
-    <tankSize>52</tankSize>
-    <model>spin</model>
-    <category>Premium</category>
-    <luggageSize>470</luggageSize>
+    <year>2014</year>
+    <km>12000</km>
+    <weight>1120</weight>
+    <hp>78</hp>
+    <value>31000.0</value>
+    <urbanConsuption>10.1</urbanConsuption>
+    <roadConsumption>12.2</roadConsumption>
+    <licensePlate>ITD-2033</licensePlate>
+    <tankSize>38</tankSize>
+    <model>HB20</model>
+    <category>Sport</category>
+    <luggageSize>150</luggageSize>
   </carStore.Hatch>
   <carStore.Sedan>
-    <year>2012</year>
-    <km>26600</km>
+    <year>2010</year>
+    <km>12000</km>
     <weight>1120</weight>
     <hp>105</hp>
-    <value>150000.0</value>
-    <urbanConsuption>6.0</urbanConsuption>
-    <roadConsumption>9.0</roadConsumption>
-    <licensePlate>IUH1699</licensePlate>
-    <tankSize>60</tankSize>
-    <model>BMW 320i</model>
-    <category>Premium</category>
-    <luggageSize>330</luggageSize>
+    <value>31000.0</value>
+    <urbanConsuption>10.1</urbanConsuption>
+    <roadConsumption>13.2</roadConsumption>
+    <licensePlate>ITD-2033</licensePlate>
+    <tankSize>55</tankSize>
+    <model>Focus</model>
+    <category>LUX</category>
+    <luggageSize>550</luggageSize>
   </carStore.Sedan>
+  <carStore.Pickup>
+    <year>2014</year>
+    <km>12000</km>
+    <weight>1120</weight>
+    <hp>135</hp>
+    <value>31000.0</value>
+    <urbanConsuption>9.1</urbanConsuption>
+    <roadConsumption>13.7</roadConsumption>
+    <licensePlate>IKD-2079</licensePlate>
+    <tankSize>38</tankSize>
+    <model>Ranger</model>
+    <category>Premium</category>
+    <carryingCapacity>2500</carryingCapacity>
+  </carStore.Pickup>
+  <carStore.SUV>
+    <year>2013</year>
+    <km>12000</km>
+    <weight>1120</weight>
+    <hp>135</hp>
+    <value>31000.0</value>
+    <urbanConsuption>9.1</urbanConsuption>
+    <roadConsumption>13.7</roadConsumption>
+    <licensePlate>IKD-2079</licensePlate>
+    <tankSize>38</tankSize>
+    <model>IX35</model>
+    <category>Premium</category>
+    <groundheight>40</groundheight>
+    <fourByFour>true</fourByFour>
+  </carStore.SUV>
 </list>

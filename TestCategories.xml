@@ -1,0 +1,9 @@
+<categoryManager>
+  <Categories>
+    <string>LUX</string>
+    <string>PREMIUM</string>
+    <string>SPORT</string>
+    <string>OFFROAD</string>
+    <string>BASIC</string>
+  </Categories>
+</categoryManager>

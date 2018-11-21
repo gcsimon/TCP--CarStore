@@ -1,0 +1,4 @@
+Bibliotecas externas utilizadas para trabalhar com leitura e escrita de dados em arquivos .xml
+- XStream - 1.4.11.1
+- dom4J - 1.6.1
+- xpp3_min - 1.1.4c

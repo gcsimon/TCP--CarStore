@@ -1,18 +1,4 @@
 <list>
-  <carStore.Eletric>
-    <year>2018</year>
-    <km>12000</km>
-    <weight>1120</weight>
-    <hp>128</hp>
-    <value>31000.0</value>
-    <urbanConsuption>30.1</urbanConsuption>
-    <roadConsumption>22.2</roadConsumption>
-    <licensePlate>ITD-2033</licensePlate>
-    <tankSize>38</tankSize>
-    <model>Prius</model>
-    <category>Premium</category>
-    <chargingTime>12.0</chargingTime>
-  </carStore.Eletric>
   <carStore.Hatch>
     <year>2014</year>
     <km>12000</km>
@@ -21,10 +7,10 @@
     <value>31000.0</value>
     <urbanConsuption>10.1</urbanConsuption>
     <roadConsumption>12.2</roadConsumption>
-    <licensePlate>ITD-2033</licensePlate>
+    <licensePlate>IYH-2863</licensePlate>
     <tankSize>38</tankSize>
     <model>HB20</model>
-    <category>Sport</category>
+    <category>SPORT</category>
     <luggageSize>150</luggageSize>
   </carStore.Hatch>
   <carStore.Sedan>
@@ -35,39 +21,10 @@
     <value>31000.0</value>
     <urbanConsuption>10.1</urbanConsuption>
     <roadConsumption>13.2</roadConsumption>
-    <licensePlate>ITD-2033</licensePlate>
+    <licensePlate>ITR-9537</licensePlate>
     <tankSize>55</tankSize>
     <model>Focus</model>
     <category>LUX</category>
     <luggageSize>550</luggageSize>
   </carStore.Sedan>
-  <carStore.Pickup>
-    <year>2014</year>
-    <km>12000</km>
-    <weight>1120</weight>
-    <hp>135</hp>
-    <value>31000.0</value>
-    <urbanConsuption>9.1</urbanConsuption>
-    <roadConsumption>13.7</roadConsumption>
-    <licensePlate>IKD-2079</licensePlate>
-    <tankSize>38</tankSize>
-    <model>Ranger</model>
-    <category>Premium</category>
-    <carryingCapacity>2500</carryingCapacity>
-  </carStore.Pickup>
-  <carStore.SUV>
-    <year>2013</year>
-    <km>12000</km>
-    <weight>1120</weight>
-    <hp>135</hp>
-    <value>31000.0</value>
-    <urbanConsuption>9.1</urbanConsuption>
-    <roadConsumption>13.7</roadConsumption>
-    <licensePlate>IKD-2079</licensePlate>
-    <tankSize>38</tankSize>
-    <model>IX35</model>
-    <category>Premium</category>
-    <groundheight>40</groundheight>
-    <fourByFour>true</fourByFour>
-  </carStore.SUV>
 </list>

@@ -4,10 +4,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry including="xpp3_min-1.1.4c.jar|xstream-1.4.11.1.jar" kind="src" path="lib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry kind="lib" path="lib/xpp3_min-1.1.4c.jar"/>
 	<classpathentry kind="lib" path="lib/xstream-1.4.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/leand/TCP--CarStore/lib/dom4j-1.6.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/leand/TCP--CarStore/lib/jdom-1.1.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/leand/TCP--CarStore/lib/jdom2-2.0.5.jar"/>
+	<classpathentry kind="lib" path="lib/xpp3_min-1.1.4c.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

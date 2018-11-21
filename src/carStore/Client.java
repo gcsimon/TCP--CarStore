@@ -5,6 +5,11 @@ import java.util.Scanner;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
 @XStreamAlias("client")
+/**
+ * Classe que representa um cliente
+ *
+ *
+ */
 public class Client {
 
 	private String name;
@@ -14,6 +19,13 @@ public class Client {
 	
 	Client(){}
 	
+	/**
+	 * @param name
+	 * @param cpf
+	 * @param telephone
+	 * @param categoryPreferencial
+	 *
+	 */
 	public Client(String name, String cpf, String telephone, String preferencialCategory){
 		this.name = name;
 		this.cpf = cpf;

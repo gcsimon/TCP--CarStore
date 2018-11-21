@@ -1,0 +1,32 @@
+<list>
+  <client>
+    <name>Herminea</name>
+    <cpf>07525951554</cpf>
+    <telephone>79423432</telephone>
+    <preferencialCategory>PREMIUM</preferencialCategory>
+  </client>
+  <client>
+    <name>Olavo</name>
+    <cpf>29659464867</cpf>
+    <telephone>23423423</telephone>
+    <preferencialCategory>SPORT</preferencialCategory>
+  </client>
+  <client>
+    <name>Eustaquio</name>
+    <cpf>86595748654</cpf>
+    <telephone>56845538</telephone>
+    <preferencialCategory>OFFROAD</preferencialCategory>
+  </client>
+  <client>
+    <name>Olivia</name>
+    <cpf>98698743534</cpf>
+    <telephone>64356437</telephone>
+    <preferencialCategory>BASIC</preferencialCategory>
+  </client>
+  <client>
+    <name>Robson</name>
+    <cpf>86654787476</cpf>
+    <telephone>89565684</telephone>
+    <preferencialCategory>LUX</preferencialCategory>
+  </client>
+</list>

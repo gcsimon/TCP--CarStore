@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Locale.Category;
 import java.util.Scanner;
 
 public class Store {
@@ -12,13 +13,11 @@ public class Store {
 	List<Client> clients;
 	CategoryManager categories;
 	
-	public Store(){
-		cars = new ArrayList<>();
-		categories = new CategoryManager();
-		clients = new ArrayList<Client>();
-		categories.addCategory("Lux");
-		categories.addCategory("Premium");
-		categories.addCategory("Popular");	
+	public Store(List<Automobile> cars, List<Client> clients, CategoryManager categories){
+		this.cars = cars;
+		this.categories = categories;
+		this.clients = clients;
+
 		
 	}
 	
@@ -86,7 +85,12 @@ public class Store {
 	        String cat = scan.next();
         	
         	while(!this.categories.checkIfCategoryExists(cat)) {
-            	System.out.print("Categoria inexistente. Digite a categoria: ");
+            	System.out.println("Categoria inexistente. ");
+            	System.out.print("Categorias existentes: ");
+            	for (String category : this.categories.Categories ) { 
+            		  System.out.print(category + ", ");
+            	}
+            	System.out.print("\nDigite a categoria: ");
     	        cat = scan.next();
         	}
         	
@@ -251,17 +255,16 @@ public class Store {
 				System.out.println("not yet");
 			System.out.println("");
 			System.out.println("");
-		}
+			
+		} scan.close();
 	
 	}
 	
 	
     public static void main(String[] args) {    	
-    	Store st = new Store();
-    	DataBase db = new DataBase("padrao"); 
+    	DataBase db = new DataBase("aplication"); 
+    	Store st = new Store(db.getCarsXML(), db.getClientesXML(),db.getCategoryManagerXML());
     	
-    	st.clients = db.getClientesXML();
-    	st.cars = db.getCarsXML();
     	
     	//st.addAutomobile(); 
     	//st.removeAutomobile();
@@ -278,7 +281,7 @@ public class Store {
     	
     	db.setCarsXML(st.cars);
     	db.setClientesXML(st.clients);
-  	
+  	    db.setCategorysXML(st.categories);
     }
     
     

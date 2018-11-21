@@ -1,20 +1,32 @@
 <list>
   <client>
-    <name>Maria</name>
-    <cpf>86598743534</cpf>
-    <telephone>5233287054</telephone>
-    <preferencialCategory>Popular</preferencialCategory>
+    <name>Herminea</name>
+    <cpf>07525951554</cpf>
+    <telephone>79423432</telephone>
+    <preferencialCategory>Pickup</preferencialCategory>
   </client>
   <client>
-    <name>Joao</name>
-    <cpf>53535353534</cpf>
-    <telephone>5233520544</telephone>
-    <preferencialCategory>Premium</preferencialCategory>
+    <name>Olavo</name>
+    <cpf>29659464867</cpf>
+    <telephone>23423423</telephone>
+    <preferencialCategory>SUV</preferencialCategory>
   </client>
   <client>
-    <name>Jose</name>
-    <cpf>11559988553</cpf>
-    <telephone>5133254054</telephone>
-    <preferencialCategory>Premium</preferencialCategory>
+    <name>Eustaquio</name>
+    <cpf>86595748654</cpf>
+    <telephone>56845538</telephone>
+    <preferencialCategory>Sedan</preferencialCategory>
+  </client>
+  <client>
+    <name>Olivia</name>
+    <cpf>98698743534</cpf>
+    <telephone>64356437</telephone>
+    <preferencialCategory>SUV</preferencialCategory>
+  </client>
+  <client>
+    <name>Robson</name>
+    <cpf>86654787476</cpf>
+    <telephone>89565684</telephone>
+    <preferencialCategory>Eletric</preferencialCategory>
   </client>
 </list>
