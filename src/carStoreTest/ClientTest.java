@@ -17,6 +17,8 @@ public class ClientTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		
+		
 		client = new Client("Maria", "86598743534", "5233287054", "SUV");
 		automobile =  new Pickup(2014,12000,1120,135,31000,9.1, 13.7, "IKD-2079", 38, "Ranger", "SUV", 2500);
 	}

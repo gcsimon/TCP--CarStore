@@ -15,6 +15,7 @@ public class AutomobileTest {
 	public void setUp() {
 		category = "Basic";
 		car = new Automobile(2012,12000,1120,78,31000,10.1, 12.2, "ITD-2033", 38, "Uno", category);
+		
 	}
 	
 	
