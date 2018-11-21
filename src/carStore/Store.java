@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Locale.Category;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Store {
@@ -215,6 +216,15 @@ public class Store {
 		 
 	}
 	
+	public void recommendAutomobile() { 
+		Random rand = new Random();
+    	int n = rand.nextInt(this.cars.size());        
+    	this.cars.get(n).info();
+
+	}
+	
+	
+	
 	public void menu() {
 		 		
 		int option = 1;			
@@ -252,7 +262,7 @@ public class Store {
 			else if (option == 9)
 				this.removeAutomobile();
 			else if (option == 10)
-				System.out.println("not yet");
+				this.recommendAutomobile();
 			System.out.println("");
 			System.out.println("");
 			
