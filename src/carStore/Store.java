@@ -12,6 +12,7 @@ public class Store {
 	List<Automobile> cars;
 	List<Client> clients;
 	CategoryManager categories;
+	Scanner scan = new Scanner(System.in);
 	
 	public Store(List<Automobile> cars, List<Client> clients, CategoryManager categories){
 		this.cars = cars;
@@ -20,7 +21,7 @@ public class Store {
 	}
 	
 	public void addKm() {
-		Scanner scan = new Scanner(System.in);		
+		 		
 		System.out.print("placa do automovel a ser aumentada a km:  ");
         String  licensePlate  = scan.next();
         for(Automobile a : this.cars) {
@@ -31,12 +32,12 @@ public class Store {
         		System.out.println("Veículo atualizado");
         	}
         }   
-        scan.close();
+         
 	}
 	
 	
 	public void addAutomobile() {		
-		Scanner scan = new Scanner(System.in);
+		 
 		System.out.println("Qual tipo de veiculo voce deseja inserir? ");
 		System.out.println("1 para SUV ");
 		System.out.println("2 para eletrico ");
@@ -133,7 +134,7 @@ public class Store {
 	}
 	
 	public void removeAutomobile() {
-		Scanner scan = new Scanner(System.in);
+		 
 		System.out.print("placa do automovel a ser vendido:  ");
         String  licensePlate  = scan.next();
         List<Automobile> toRemove = new ArrayList<>();
@@ -142,11 +143,12 @@ public class Store {
         		toRemove.add(a);
         }        
         this.cars.removeAll(toRemove);
-        scan.close();
+         
+        this.printCarRepository();
 	}
 	
 	public void removeClient() {
-		Scanner scan = new Scanner(System.in);
+		 
 		System.out.print("nome do cliente a ser removido:  ");
         String  name  = scan.next();
         List<Client> toRemove = new ArrayList<>();
@@ -155,11 +157,11 @@ public class Store {
         		toRemove.add(a);
         }        
         this.clients.removeAll(toRemove);
-        scan.close();
+         
 	}
 	
 	public void searchAutomobile() {
-		Scanner scan = new Scanner(System.in);
+		 
 		
 		System.out.print("valor max:  ");
         double  maxValue  = scan.nextDouble();
@@ -173,12 +175,12 @@ public class Store {
         	if (auto.getValue() <= maxValue && auto.getYear() >= maxYear && auto.getRoadConsumption() >= kmPerLt)
         		System.out.println(auto.getLicensePlate());
         }   
-        scan.close();
+         
 
 	}
 	
 	public void checkValue() {
-		Scanner scan = new Scanner(System.in);		
+		 		
 		System.out.print("placa: ");
         String  licensePlate  = scan.next();
         
@@ -186,7 +188,7 @@ public class Store {
         	if (auto.getLicensePlate().equals(licensePlate))
         		System.out.println(auto.getValue());
         }
-        scan.close();
+         
 	}
 	
 	public void printCarRepository() {
@@ -200,7 +202,7 @@ public class Store {
 	}
 	
 	public void addClient() {
-		Scanner scan = new Scanner(System.in);			
+		 			
 		System.out.println("Nome: ");
 		String name= scan.next();
 		System.out.println("CPF: ");
@@ -210,11 +212,11 @@ public class Store {
 		System.out.println("Categoria preferencial: ");
 		String preferencialCategory= scan.next();		
 		this.clients.add(new Client(name,cpf,telephone,preferencialCategory));
-		scan.close();
+		 
 	}
 	
 	public void menu() {
-		Scanner scan = new Scanner(System.in);		
+		 		
 		int option = 1;			
 		
 		while(option != 0) {
@@ -254,7 +256,7 @@ public class Store {
 			System.out.println("");
 			System.out.println("");
 			
-		} scan.close();
+		}  
 	
 	}
 	
@@ -268,7 +270,7 @@ public class Store {
     	//Guarda os dados do estoque na base de dados antes de encerrar
     	db.setCarsXML(st.cars);
     	db.setClientesXML(st.clients);
-  	    db.setCategorysXML(st.categories);
+  	    db.setCategorysXML(st.categories);  	    
     }
     
     
