@@ -17,7 +17,10 @@ public class Client {
 	private String telephone;
 	private String preferencialCategory;
 	
-	Client(){}
+	Client(){
+		
+		
+	}
 	
 	/**
 	 * @param name

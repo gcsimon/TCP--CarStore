@@ -19,6 +19,7 @@ import carStore.Pickup;
 import carStore.SUV;
 import carStore.Sedan;
 
+
 public class DatabaseTest {
 	
 	DataBase banco;

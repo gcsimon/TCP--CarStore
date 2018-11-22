@@ -2,7 +2,9 @@ package carStore;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.Dom4JDriver;
-
+import com.thoughtworks.xstream.security.NoTypePermission;
+import com.thoughtworks.xstream.security.NullPermission;
+import com.thoughtworks.xstream.security.PrimitiveTypePermission;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,8 +12,8 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.Locale.Category;
 
 /**
  * Classe responsavel pela interação com a base de dados.
@@ -19,6 +21,7 @@ import java.util.Locale.Category;
  */
 public class DataBase {
 
+	 Class<?>[] classes = new Class[] { DataBase.class};
 	String arquivoClient;
 	String arquivoAutomobile;
 	String arquivoCategory;
@@ -59,6 +62,9 @@ public class DataBase {
 	public void setClientesXML(List<Client> clients) {
 
 		XStream xStream = new XStream();
+		XStream.setupDefaultSecurity(xStream); 
+		xStream.allowTypes(classes);
+		
 		xStream.alias("client", Client.class);
 		
 		File arquivo = new File(this.arquivoClient);
@@ -71,9 +77,12 @@ public class DataBase {
 			ex.printStackTrace();
 		} }
 
-
-
-
+	/**
+	 * 
+	 * @return clients;
+	 * Carrega da base de dados todos os clientes.
+	 *
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Client> getClientesXML() {
 		List<Client> clients = new ArrayList<Client>();
@@ -81,6 +90,8 @@ public class DataBase {
 		try {
 
 			XStream xStream = new XStream(new Dom4JDriver());
+			xStream.addPermission(NullPermission.NULL);
+			xStream.addPermission(PrimitiveTypePermission.PRIMITIVES);
 			xStream.alias("client", Client.class);
 			xStream.processAnnotations(Client.class);
 
@@ -120,20 +131,28 @@ public class DataBase {
 			ex.printStackTrace();
 		} }
 
+	/**
+	 * 
+	 * @return automobiles;
+	 * Carrega da base de dados todos os automoveis.
+	 *
+	 */
 	@SuppressWarnings("unchecked")
 	public List<Automobile> getCarsXML() {
-		List<Automobile> cars = new ArrayList<Automobile>();
+		List<Automobile> automobiles = new ArrayList<Automobile>();
 
 
 		try {
 
 			XStream xStream = new XStream(new Dom4JDriver());
+			xStream.addPermission(NullPermission.NULL);
+			xStream.addPermission(PrimitiveTypePermission.PRIMITIVES);
 			xStream.alias("automobile", Automobile.class);
 			xStream.processAnnotations(Automobile.class);
 
 			BufferedReader input = new BufferedReader(new FileReader(this.arquivoAutomobile));
 
-			cars = (List<Automobile>) xStream.fromXML(input);
+			automobiles = (List<Automobile>) xStream.fromXML(input);
 			input.close();
 
 
@@ -141,7 +160,7 @@ public class DataBase {
 			ex.printStackTrace();
 		}
 
-		return cars;
+		return automobiles;
 	}
 	
 	/**
@@ -165,9 +184,12 @@ public class DataBase {
 			ex.printStackTrace();
 		} }
 
-
-
-
+	/**
+	 * 
+	 * @return categoryManager;
+	 * Carrega da base de dados o Gerenciador de Categorias.
+	 *
+	 */
 	@SuppressWarnings("unchecked")
 	public CategoryManager getCategoryManagerXML() {
 		CategoryManager categoryManager = new CategoryManager();
@@ -175,6 +197,8 @@ public class DataBase {
 		try {
 
 			XStream xStream = new XStream(new Dom4JDriver());
+			xStream.addPermission(NullPermission.NULL);
+			xStream.addPermission(PrimitiveTypePermission.PRIMITIVES);
 			xStream.alias("categoryManager", CategoryManager.class);
 			xStream.processAnnotations(CategoryManager.class);
 

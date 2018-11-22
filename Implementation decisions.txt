@@ -1,13 +1,18 @@
 Giovani Simon e Leandro Souza
 
+
 Decisões de implementação que foram modificadas ao implementar o projeto:
+
 
 1) Classe Categoria
 A classe categoria foi remodelada para um ArrayList de Strings(que seriam as categorias).
 Foi feita essa modificação para que as categorias possam ser adicionadas em tempo de execução e 
 somente possam ser inserido veículos em categorias já existentes.
 
+
 2)Classe Loja
 A classe loja não possuia atributos, o que era errado, pois ela deveriam ficar armazenados em tempo de execução o
 ArrayList de Clientes, o ArrayList de Carros e a classe Categoria, que contém as categorias previamente inseridas.
 
+
+3) Classe DataBase deixou de ser estática, para possibilitar que os testes fossem rodados em uma base de dados diferente da base de dados utilizada pelo software.
